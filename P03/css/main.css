@@ -1,0 +1,95 @@
+html{
+    margin: 2% 2% 2% 2%; /* top right bottom left */
+}
+
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    color: white;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+#terminal {
+    background-color: black;
+    width: 66vh;
+    height: 7vh;
+    margin-bottom: 2%;
+}
+
+.breaker{
+    
+}
+
+h1{
+    font-size: 4rem;
+    color: #005928;
+    border-bottom: 0.25rem solid #005928;
+    border-top: 0.25rem solid #005928;
+    border-left: 0.25rem solid #005928;  
+    border-right: 0.25rem solid #005928;   
+    text-align: center;
+    
+}
+
+h2{
+    font-size: 2.5rem;
+    
+    
+}
+
+.style_guide{ /*h3*/
+    font-size: 1.7rem;
+    background-color: #FF664D;
+    color: white;
+    max-width: 7em;
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 65vh;
+}
+
+.black_bg{
+    background: black;
+    text-decoration: none;
+    color: #727272;
+    padding: 1% 1% 1% 1%;
+}
+
+.black_bg:hover, .black_bg:active {
+    background: #272727;
+    text-decoration: underline;
+    text-decoration-color: #FF654C;
+    color: white;
+}
+
+.white_bg {
+    background: white;
+    text-decoration: none;
+    color: #FF6D55;
+}
+
+.white_bg:hover, .white_bg:active{
+    text-decoration: underline;
+    text-decoration-color: black;
+}

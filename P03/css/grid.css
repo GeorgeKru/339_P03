@@ -1,0 +1,80 @@
+/* based on https://www.w3schools.com/css/css3_flexbox.asp and https://css-tricks.com/snippets/css/a-guide-to-flexbox/  and weel 3 lecture*/
+
+*{
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+
+}
+
+.flex-container .col {
+    flex: 1;
+}
+
+.flex-container-1of10{
+    display: flex;
+}
+
+.flex-container-3of10 {
+    display: flex;
+}
+
+.flex-container-5of10{
+    display: flex;
+}
+
+.flex-container-1of10 .col{
+    width: 10%;
+}
+
+.flex-container-3of10 .col{
+
+    width: 33.33333%;
+}
+
+.flex-container-5of10 .col{
+
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 768px) { /* smaller than 768px */
+
+  /*  .flex-container, .flex-container-3of10 .flex-container-5of10 .flex-container-1of10 {
+        display: block;
+    }
+
+    .flex-container .col, .flex-container-3of10 .flex-container-5of10 .flex-container-1of10 .col {
+        width: 100%;
+    }*/
+
+ .parallax-about-2 .flex-container, .flex-container-3of10, .flex-container-5of10, .flex-container-1of10 {
+    display: block;
+    .col {
+      width: 100%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1147px) { /* smaller than 768px */
+
+  /*  .flex-container, .flex-container-3of10 .flex-container-5of10 .flex-container-1of10 {
+        display: block;
+    }
+
+    .flex-container .col, .flex-container-3of10 .flex-container-5of10 .flex-container-1of10 .col {
+        width: 100%;
+    }*/
+
+  .flex-container, .flex-container-3of10, .flex-container-5of10, .flex-container-1of10 {
+    display: block;
+    .col {
+      width: 100%;
+    }
+  }
+
+}
