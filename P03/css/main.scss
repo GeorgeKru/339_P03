@@ -1,0 +1,371 @@
+html,body{height:100%;}
+
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    color: white;
+}
+
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+#terminal {
+    background-color: black;
+    width: 66vh;
+    height: 7vh;
+    margin-bottom: 2%;
+}
+
+.breaker{
+    
+}
+
+h1{
+    font-size: 4rem;
+    color: #005928;
+    border-bottom: 0.25rem solid #005928;
+    border-top: 0.25rem solid #005928;
+    border-left: 0.25rem solid #005928;  
+    border-right: 0.25rem solid #005928;
+    
+    text-align: center;
+     
+    
+}
+
+h2{
+    font-size: 2.5rem;
+    
+    
+}
+
+.style_guide{ /*h3*/
+    font-size: 1.7rem;
+    background-color: #FF664D;
+    color: white;
+    max-width: 7em;
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 65vh;
+}
+
+.black_bg{
+    background: #272727;
+    text-decoration: none;
+    color: #727272;
+    padding: 1% 1% 1% 1%;
+}
+
+.black_bg:hover, .black_bg:active {
+    background: #272727;
+    text-decoration: underline;
+    text-decoration-color: #FF654C;
+    color: white;
+}
+
+.white_bg {
+    background: white;
+    text-decoration: none;
+    color: #FF6D55;
+}
+
+.white_bg:hover, .white_bg:active{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.section_container{
+    height: 100%;
+}
+
+.section_content{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*INTRO*/
+.intro_section{
+    width:100%;
+    height:100%;
+    min-height:100%;
+    padding-top: 20%;
+    background-image: url(../img/bg.jpg);
+    
+}
+
+.intro_section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.intro_section h3{
+    text-align: center;
+    color: white;
+}
+/*END*/
+
+
+/*ABOUT ME*/
+.biography{
+    background-color: #FAFAFA;
+    width:100%;
+    height:100%;
+    min-height:100%;
+    padding-top: 20%;
+    position: relative;
+}
+.biography h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+.biography p{
+    color: #474747;
+    max-width: auto;
+    line-height: 1.6;
+    
+    
+}
+
+.biography img{
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20%;
+    margin-left: 10%;
+    
+}
+/*END*/
+
+/*resume*/
+.resume{
+    width:100%;
+    height:100%;
+    min-height:100%;
+    padding-top: 20%;
+    background-color: white;
+    position: relative;
+}
+.container_right{
+    text-align: right;
+}
+.container_left{
+    text-align: left;
+}
+
+.resume h3:nth-child(1){
+    font-size: 1.2rem;
+    background-color: #FF664D;
+    color: white;
+    display: inline-block;
+    padding: 0 1.5%;
+    margin-bottom: 1.5%;
+    
+    
+}
+
+.resume h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.0rem;
+}
+/*END*/
+
+/*portfolio*/
+
+.portfolio{
+    width:100%;
+    height:auto;
+    min-height:100%;
+    padding-top: 20%;
+    background-color: #272727;
+    color: #FEFEFE;
+}
+.portfolio h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+.portfolio p{
+    line-height: 1.6;
+}
+/*END*/
+
+/*footer*/
+footer{
+    background-color: #272727;
+    padding: 0 0 0 5%;
+}
+/*END*/
+
+
+/* Configuration Parameters */
+$lineWidth: 5px;
+$lineLength: 25px;
+$baseMargin: 8px;
+$animationDuration: .2s;
+
+html {
+  background: #CCC;
+  font-family: Roboto Slab, sans-serif;
+}
+
+html,body {
+  margin: 0; 
+  padding: 0; 
+  height: 100%
+}
+
+#hamburger {
+  display: none;
+}
+
+.menu {
+  display: block;
+  background-color: #AAA;
+  width: 0px;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+  -webkit-transition-duration: $animationDuration;
+  -moz-transition-duration: $animationDuration;
+  -ms-transition-duration: $animationDuration;
+  -o-transition-duration: $animationDuration;
+  transition-duration: $animationDuration;
+  -webkit-transition-delay: $animationDuration;
+  -moz-transition-delay: $animationDuration;
+  -ms-transition-delay: $animationDuration;
+  -o-transition-delay: $animationDuration;
+  transition-delay: $animationDuration;
+  ul {
+    padding-left: 10px;
+    li {
+      font-size: 24pt;
+      padding: 10px 0;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+  }
+}
+
+.menuicon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: block;
+  cursor: pointer;
+  height: $baseMargin*2 + $lineWidth;
+  width: $lineLength;
+  span {
+    display: block;
+    top: $baseMargin;
+    width: $lineLength;
+    height: $lineWidth;
+    background-color: #000;
+    position: relative;
+    -webkit-transition-duration: 0;
+    -moz-transition-duration: 0;
+    -ms-transition-duration: 0;
+    -o-transition-duration: 0;
+    transition-duration: 0;  
+    -webkit-transition-delay: $animationDuration;
+    -moz-transition-delay: $animationDuration;
+    -ms-transition-delay: $animationDuration;
+    -o-transition-delay: $animationDuration;
+    transition-delay: $animationDuration;
+    &::after, &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: $lineLength;
+      height: $lineWidth;
+      background-color: #000;
+      -webkit-transition-property: margin, -webkit-transform;
+      -webkit-transition-duration: $animationDuration;
+      -moz-transition-duration: $animationDuration;
+      -ms-transition-duration: $animationDuration;
+      -o-transition-duration: $animationDuration;
+      transition-duration: $animationDuration;
+      -webkit-transition-delay: $animationDuration, 0;
+      -moz-transition-delay: $animationDuration, 0;
+      -ms-transition-delay: $animationDuration, 0;
+      -o-transition-delay: $animationDuration, 0;
+      transition-delay: $animationDuration, 0;
+    }
+    &::before {
+      margin-top: -$baseMargin;
+    }
+    &::after {
+      margin-top: $baseMargin;
+    }
+  }
+}
+
+#hamburger:checked ~ .menu {
+  width: 250px;
+}
+
+#hamburger:checked ~ .menuicon {
+  span {
+    background-color: rgba(0,0,0,0);
+    &::before, &::after {
+      margin-top: 0px;
+      -webkit-transition-delay: 0, $animationDuration;
+      -moz-transition-delay: 0, $animationDuration;
+      -ms-transition-delay: 0, $animationDuration;
+      -o-transition-delay: 0, $animationDuration;
+      transition-delay: 0, $animationDuration;
+    }
+    &::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+}

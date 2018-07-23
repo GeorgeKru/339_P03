@@ -1,95 +1,256 @@
-html{
-    margin: 2% 2% 2% 2%; /* top right bottom left */
-}
-
+html, body {
+  height: 100%; }
 
 .typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 5.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-    color: white;
-}
-
-
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 5.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 5.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  color: white; }
 
 /* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 
 /* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
 
 #terminal {
-    background-color: black;
-    width: 66vh;
-    height: 7vh;
-    margin-bottom: 2%;
-}
-
-.breaker{
+  background-color: black;
+  width: auto;
+  height: auto;
+  margin-bottom: 2%;
     
 }
 
-h1{
-    font-size: 4rem;
-    color: #005928;
-    border-bottom: 0.25rem solid #005928;
-    border-top: 0.25rem solid #005928;
-    border-left: 0.25rem solid #005928;  
-    border-right: 0.25rem solid #005928;   
-    text-align: center;
+.typewriter{
+    width: auto;
     
 }
 
-h2{
-    font-size: 2.5rem;
-    
-    
-}
+h1 {
+  font-size: 4rem;
+  color: #005928;
+  border-bottom: 0.25rem solid #005928;
+  border-top: 0.25rem solid #005928;
+  border-left: 0.25rem solid #005928;
+  border-right: 0.25rem solid #005928;
+  text-align: center; }
 
-.style_guide{ /*h3*/
-    font-size: 1.7rem;
-    background-color: #FF664D;
-    color: white;
-    max-width: 7em;
-    text-align: center;
-}
+h2 {
+  font-size: 2.5rem; }
 
-.wrapper{
-    max-width: 65vh;
-}
+.style_guide {
+  /*h3*/
+  font-size: 1.7rem;
+  background-color: #FF664D;
+  color: white;
+  max-width: 7em;
+  text-align: center; }
 
-.black_bg{
-    background: black;
-    text-decoration: none;
-    color: #727272;
-    padding: 1% 1% 1% 1%;
-}
+.wrapper {
+  max-width: 65vh; }
+
+.black_bg {
+  background: #272727;
+  text-decoration: none;
+  color: #727272;
+  padding: 1% 1% 1% 1%; }
 
 .black_bg:hover, .black_bg:active {
-    background: #272727;
-    text-decoration: underline;
-    text-decoration-color: #FF654C;
-    color: white;
-}
+  background: #272727;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #FF654C;
+  text-decoration-color: #FF654C;
+  color: white; }
 
 .white_bg {
-    background: white;
-    text-decoration: none;
-    color: #FF6D55;
+  background: white;
+  text-decoration: none;
+  color: #FF6D55; }
+
+.white_bg:hover, .white_bg:active {
+  text-decoration: underline;
+  -webkit-text-decoration-color: black;
+  text-decoration-color: black; }
+
+.section_container {
+  min-height: 100%; }
+
+.section_content {
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+/*INTRO*/
+.intro_section {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding-top: 20%;
+  background-image: url(../img/bg.jpg); }
+
+.intro_section h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.intro_section h3 {
+  text-align: center;
+  color: white; }
+
+/*END*/
+/*ABOUT ME*/
+.biography {
+  background-color: #FAFAFA;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding-top: 20%;
+  position: relative; }
+
+.biography h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.0rem; }
+
+.biography p {
+  color: #474747;
+  max-width: auto;
+  line-height: 1.6; }
+
+.biography img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-left: 10%; }
+
+/*END*/
+/*resume*/
+.resume {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding-top: 20%;
+  background-color: white;
+  position: relative; }
+
+.container_right {
+  text-align: right; }
+
+.container_left {
+  text-align: left; }
+
+.resume h3:nth-child(1) {
+  font-size: 1.2rem;
+  background-color: #FF664D;
+  color: white;
+  display: inline-block;
+  padding: 0 1.5%;
+  margin-bottom: 1.5%; }
+
+.resume h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.0rem; }
+
+/*END*/
+/*portfolio*/
+.portfolio {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding-top: 20%;
+  background-color: #272727;
+  color: #FEFEFE; }
+
+.portfolio h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.0rem; }
+
+.portfolio p {
+  line-height: 1.6; }
+
+/*END*/
+/*footer*/
+footer {
+  background-color: #272727;
+  padding: 0 0 0 5%; }
+
+/*END*/
+
+
+
+/* Configuration Parameters */
+/*https://www.w3schools.com/howto/howto_css_fixed_menu.asp*/
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.white_bg:hover, .white_bg:active{
-    text-decoration: underline;
-    text-decoration-color: black;
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.responsive_image{
+    max-width: 100%;
+    height: auto;
+}
+
+
