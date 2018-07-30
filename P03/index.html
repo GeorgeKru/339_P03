@@ -10,28 +10,28 @@
    </head>
    <body>
        <header>
-                 <div class="navbar">
+           <div class="navbar">
           <a href="#biography">About me</a>
           <a href="#resume">Resume</a>
           <a href="#portfolio">Potfolio</a>
         </div>
            
        </header>
-      <div class="section_container">
+      
          <section class="intro_section">
             <h1>George Krutous</h1>
             <h3>MS SQL DATABASE ADMINISTRATOR ASSISTANCE</h3>
             <h3>PHP+SQL, Python+SQL</h3>
             <h3>SSIS, SSAS, SSRS, MDX and DAX queries</h3>
             
-             <div id="terminal">
+             <!--<div id="terminal">
                 <div class="typewriter">
                     <p>INSERT INTO employees (IT_department)
                     Values (George_Krutous);</p>
                 </div>
-            </div>
+            </div>-->
          </section>
-      </div>
+      
       <div class="section_container">
          <section class="biography" id="biography">
             <h2>About me</h2>
@@ -42,14 +42,13 @@
                      <p>My name is George and I am interested in back end development, working with databases and big data. I am a 4th year student at the School of Interactive Arts and Technology at Simon Fraser University. Currently at my last term finishing undergraduate degree (Summer 2018). Turned out that I found myself working with SQL databases, but my education gave the understanding of the front-end development process and increased my communication skill a lot. Also, I am running small two person company selling used car batteries back to the Japanese factory, for about 3 years. As for my hobbies, I have been playing on the guitar for 12 years and cello for 8 years.</p>
                   </div>
                   <div class="col-4">
-                     <img src="img/me.jpg" alt="Picture of George Krutous">                        
+                                            
                   </div>
                   <div class="col-4">
                      <h3>Professional information</h3>
                      <h4>George Krutous</h4>
                      <p>Prosseional support of the databases. Development of the database schema. Writing SQL queries. Database optimization. SSIS, SSAS, SSRS, MDX and DAX queries. Python and PHP development related to the SQL.</p>
-                     <p>Born: January 20th, 1994</p>
-                     <p>E-mail:<a class="white_bg" href="mailto:gkrutous@sfu.ca"> gkrutous@sfu.ca</a></p>
+                     <p>E-mail:<a class="white_bg" href="mailto:example@sfu.ca"> gkrutous@sfu.ca</a></p>
                   </div>
                </div>
             </div>
@@ -83,19 +82,27 @@
             </div>
          </div>
       </section>
-       </div>     
+       </div>    
+       <div class="section_container">
       <section class="portfolio" id="portfolio">
           <div class="section_content">
              <h2>Portfolio</h2>
               <div class="row">
                 <div class="col-6">
+                    
                      <h3>Book share (php + MySQL). 2017</h3>
                     <p>The idea of that individual term project was to create a book share library where users can exchange books among each other for free. Due to the amount information of information and project requirements I decide to use the MySQL database. To connect the web interface with the database I used PHP. First step was to create HTML and CSS skeleton of the website to simplify users’ communication with the database. As basic foundation was finished, I start to work with the database itself by defining relations, key and type of organization. There are two main tables were used: books with unique e-mail key that allows to register/login. </p>
-                    <p>The next step was to connect the web interface with the database using proper logic. By creating a set of prepared statements and applied proper quires I achieved the following functionalities for that website: 1) Login/Register; 2) Search by ISBN; search by title, 3) Filter by years; 4) Ability to choose which columns (aka information) would be presented about books. After that, I’ve decided to add AJAX that would parse XML file which contain the top 10 of the last month books. Furthermore, to achieve the bonus mark I did the admin page where user with privileges is able to edit the database (safely), for example ban users, easily add/remove books.</p>
+                    <p>The next step was to connect the web interface with the database using proper logic. By creating a set of prepared statements and applied proper quires I achieved the following functionalities for that website: 1) Login/Register; 2) Search by ISBN; search by title, 3) Filter by years; 4) Option to choose which columns (information) would be presented about books. After that, I’ve decided to add AJAX that would parse XML file which contain the top 10 of the last month books. Furthermore, to achieve the bonus mark I did the admin page where user with privileges is able to edit the database (safely), for example ban users, easily add/remove books.</p>
+                    <p>Furthermore, there were some tasks that I had to solve to the make this website work properly. First one, the logic of the registration page should be in the very persice way to exclude registration issues and translate MySQL errors such as '1062' into human readable language. For example, '1062' error simply means that user with such e-mail already exists. The next interesting point was to perform the following task: as user click on one of the books, then page with details about this book should opens.Of course, it is not the case where each book will have own page, so the issue there was to write special 'PHP?bookISBN' link that will open a new page about this book, retrieve the information about the book and place the information correctly around prepared layout. Since, this dynamic link was not covered in the course it took some time to figure out it.</p>
                 </div>
               <div class="col-6">
-                  <img src="img/Screenshot_2.png" alt="Book_Share_interface" class="responsive_image">
-                  <img src="img/Screenshot_3.png" alt="Book_Share_interface" class="responsive_image">
+                  <figure><img src="img/tables.png" alt="example of tables layout" class="responsive_image">
+                      <figcaption>My SQL tables layout</figcaption>
+                  </figure>
+                  <figure>
+                  <img src="img/users.png" alt="example of users table" class="responsive_image">
+                  <figcaption>Example of MySQL table of users with SHA-256 password column</figcaption>    
+                  </figure>    
               </div>
               
               </div>  
@@ -105,9 +112,19 @@
                       <p>Team of 3. Role: programing parts that are related to the parsing and SQLite</p>
                       <p>This was a term project in a team of 3 and we decided to create an android application that would achieve following goals: 1) e-reader allows to reduce the cost of production and publications; 2) integrate learning elements that would allow to check the material that was read before; 3) track the progress of the studying process. There were certain difficulties with visual presentation of some elements such as tables and diagrams because the interface supposed to be responsive and available for portrait and landscape modes. It was my first experience of developing an android application and work with SQLite and XML parser all in one, but my teammate with stronger coding skill was able to navigate me through this process and teach me a lot so I was able to finish my parts without struggling the team.</p><p>Furthermore, it was an interesting communication experience as one of our teammates was concentrated on the design only and did not touch the code and was important for us to implement her ideas precisely with the limit of our skills and time pressure. The result of that collaboration was the fully functional and industry level application (no memory leaking, no data disappearances, no UI dead-ends) that might be used to study the material in a way of the e-book and then test yourself answering on the related questions from the end of the chapter quiz section or at the end of the book exam set of questions.</p>
                   </div>
+                  
+                  <div class="col-6">
+                  <figure><img src="img/UI-level1.jpg" alt="General UI layout" class="responsive_image">
+                      <figcaption>General UI layout</figcaption>
+                  </figure>
+                      
+                  
+                   
+              </div>
               </div>
           </div>
       </section>
+           </div>
        <footer>
            <div class="row">
                <div class="col-4">
